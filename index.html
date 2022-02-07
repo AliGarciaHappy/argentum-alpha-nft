@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face {
+            font-family: Argue;
+            src: url("fonts/Argue.ttf");
+        }
+        @font-face {
+            font-family: Montserrat Light;
+            src: url("fonts/montserrat-light.ttf");
+        }
+        body {
+          font-family: Montserrat Light;
+          color: #282828;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                blueAAN: '#4154FF',
+                blackAAN: '#282828',
+              },
+              fontFamily: {
+                argue: ['Argue'],
+                monserrat: ['Montserrat Light'],
+                },
+            }
+          }
+        }
+    </script>
+    <title>Argentum Alpha NFT</title>
+</head>
+<body>
+  <div class="h-screen bg-[url('/img/hero-desktop-1.5.png')] bg-cover bg-no-repeat">
+    <header class="pt-10">
+        <div class="max-w-[1270px] px-[50px] mx-auto text-gray-700 dark-mode:text-gray-200 dark-mode:bg-gray-800">
+            <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+              <div class=" flex flex-row items-center justify-between">
+                <a href="#"><img src="img/argentum-logo.svg" alt="Argentum Alpha NFT"></a>
+                <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline p-4" @click="open = !open">
+                  <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                    <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                    <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                  </svg>
+                </button>
+              </div>
+              <nav :class="{'flex': open, 'hidden': !open}" class="flex-col pb-4 md:pb-0 hidden md:flex md:flex-row font-['montserrat'] text-white">
+                <a class="px-6 py-2 font-" href="#">About</a>
+                <a class="px-6 py-2 font-" href="#">How Does It Work</a>
+                <a class="px-6 py-2 font-" href="#">Roadmap</a>
+                <a class="px-6 py-2 font-" href="#">Docs</a>  
+              </nav>
+              <a href="#" class="bg-blueAAN text-white py-3 px-8 rounded-full drop-shadow-xl">Discover Artwork</a>
+            </div>
+          </div>
+    </header>
+    <section>
+      <div class="pt-[200px] pb-[300px] flex flex-col justify-center items-center">
+        <h2 class="font-argue text-[69px] text-white text-center mb-10">Argentum Alfa<br> <span class="text-[97px] block mt-[-45px]">The world safest NFT</span></h2>
+        <a href="" class="border border-white text-center inline-block py-3 px-8 rounded-full text-white">Scroll to see more</a>
+      </div>
+    </section>
+  </div>
+  <section class="bg-white pt-[125px] pb-[100px]">
+    <div class="flex flex-col max-w-[1270px] px-[50px] mx-auto items-center">
+
+      <div class="flex items-center">
+        <div class="w-1/2">
+          <img src="img/Bitmap.png" alt="Bitmap NFT ART" class="block mr-auto">
+        </div>
+
+        <div class="w-1/2 pl-10 pr-20 flex-col flex">
+          <h2 class="font-argue text-[56px] leading-[60px] mb-10">About<br> Argentum</h2>
+          <img src="img/Line-1.png" alt="Decorative black line" class="z-10 ml-[-210px] mb-7">
+          <p>Argentum Alpha NFT is a collection of algorithmic generated contemporary art designed by Argentum group and minted as NFT’s on the network. They are constructed from various geometric shapes, lines and colors in different % which determines their rarity. The purpose of Argentum Alpha NFT is to provide economic benefits to their owner’s. Argentum Alfa NFT is aiming to be the world safest NFT collection. We achieve this by providing to our community buy back options at the same price as the minting purchase price measured in USD.</p>
+        </div>
+      </div>
+
+      <div class="flex mt-[125px]">
+        <div class="flex items-start w-1/3">
+          <img src="img/guarantee-icon.png" alt="Icon guarantee" class="align-self mr-5">
+          <div>
+            <h3 class="font-argue text-2xl">Guarantee Buyback</h3>
+            <p>Protect your capital with our lifetime Buyback option.</p>
+          </div>
+        </div>
+        <div class="flex items-start mx-[60px] w-1/3">
+          <img src="img/payout-icon.png" alt="Icon guarantee" class="align-self mr-5">
+          <div>
+            <h3 class="font-argue text-2xl">Monthly Payout</h3>
+            <p>Earn up to 12% APY.</p>
+          </div>
+        </div>
+        <div class="flex items-start w-1/3">
+          <img src="img/art-icon.png" alt="Icon guarantee" class="align-self mr-5">
+          <div>
+            <h3 class="font-argue text-2xl">Digital Contemporary Art</h3>
+            <p>The price of the NFT will retain its US dollar value. Rare pieces will potentially raise their market value. </p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <section class="pb-[55px]">
+    <div class="max-w-[1270px] px-[50px] mx-auto flex">
+      <div class="w-2/5 mt-10 z-10">
+        <h2 class="font-argue text-4xl">Be part of a
+          growing community
+          and stay on the know for future plans, products and development.</h2>
+        <img src="img/Line-9.png" alt="Decorative line" class="mb-5 ml-36">
+        <a href="#" class="bg-blueAAN text-white py-4 px-8 rounded-full drop-shadow-xl">Discover Artwork</a>
+      </div>
+      <img src="img/art-3.png" alt="NFT Art" class="w-3/5 ml-14">
+    </div>
+  </section>
+
+  <section class="py-[55px] bg-[url('/img/bg-arc.png')] bg-right bg-no-repeat">
+    <div class="max-w-[1270px] px-[50px] mx-auto flex items-center items-stretch">
+      <div class="w-1/5 h-full m-auto mr-20 self-stretch">
+        <div class="block -rotate-90 ">
+          <h2 class="font-argue inline-block text-[72px] whitespace-nowrap">How It Works</h2>
+        </div>
+      </div>
+
+          
+        <div class="w-4/5">
+          <div class="border-b border-blackAAN flex py-7  w-[90%]">
+            <div class="mr-6">
+              <span class="text-[40px] font-argue">01</span>
+            </div>
+            <div>
+              <h3 class="text-[40px] font-argue text-blueAAN">Connect your wallet </h3>
+              <p class="text-xl">Or contact us via email or prefered method.</p>
+            </div>
+          </div>
+          <div class="border-b border-blackAAN flex py-7 w-[80%]">
+            <div class="mr-6">
+              <span class="text-[40px] font-argue">02</span>
+            </div>
+            <div>
+              <h3 class="text-[40px] font-argue text-blueAAN">Choose your favorite</h3>
+              <p class="text-xl">Choose your preferred type and tier.</p>
+            </div>
+          </div>
+          <div class="border-b border-blackAAN flex py-7 w-[80%]">
+            <div class="mr-6">
+              <span class="text-[40px] font-argue">03</span>
+            </div>
+            <div>
+              <h3 class="text-[40px] font-argue text-blueAAN">Mint the NFT on our website</h3>
+              <p class="text-xl">No crypto native we will do on your behalf.</p>
+            </div>
+          </div>
+          <div class="border-b border-blackAAN flex py-7 w-[90%]">
+            <div class="mr-6">
+              <span class="text-[40px] font-argue">04</span>
+            </div>
+            <div>
+              <h3 class="text-[40px] font-argue text-blueAAN">Congratulations</h3>
+              <p class="text-xl">You are now a proud owner of Argentum Alpha NFT.</p>
+            </div>
+          </div>
+          <div class="flex py-7">
+            <div class="mr-6">
+              <span class="text-[40px] font-argue">05</span>
+            </div>
+            <div>
+              <h3 class="text-[40px] font-argue text-blueAAN">Enjoy monthly rewards</h3>
+              <p class="text-xl">Based on your NFT type and tier. </p>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+  <section class="py-[140px] bg-[url('img/taedae-bg.png')] bg-center bg-cover bg-no-repeat">
+    <div class="flex max-w-[1270px] px-[50px] mx-auto items-stretch">
+      <div class="bg-blueAAN pl-[70px] py-[60px] pr-[60px] text-white flex flex-col justify-between min-w-[373px] h-[350px]">
+        <div>
+          <div class="w-[58px] h-[58px] block bg-[url('/img/active-user-icon.png')] bg-center bg-no-repeat"></div>
+          <h2 class="font-argue text-[40px]">Active Users</h2>
+        </div>
+
+        <span class="font-argue text-[58px]">500</span>
+      </div>
+
+      <div class="bg-blueAAN pl-[70px] py-[60px] pr-[60px] text-white flex flex-col justify-between h-[350px] ml-5 w-full">
+        <div>
+          <div class="w-[58px] h-[58px] block bg-[url('/img/star-icon.png')] bg-center bg-no-repeat"></div>
+          <h2 class="font-argue text-[40px]">Reward paid to our Community</h2>
+        </div>
+
+        <span class="font-argue text-[58px]">$ 4’ 987, 998 567</span>
+      </div>
+    </div>
+  </section>
+  <div class="max-w-[1270px] px-[50px] mx-auto h-[55px] bg-[url('img/line-6.png')] bg-right bg-no-repeat z-10 my-[-27.5px]"></div>
+  <section class="pt-24 pb-28">
+    <div class="max-w-[1270px] px-[50px] mx-auto">
+      <h2 class="font-argue text-[56px] mb-14">Argentum Team</h2>
+
+      <div class="flex justify-between">
+        <div>
+          <img src="img/artist-1.png" alt="Artist Nuria Pelayo">
+          <h3 class="font-argue text-blueAAN text-2xl pl-5 pt-5">Artist</h3>
+          <h4 class="pl-5">Nuria Pelayo</h4>
+        </div>
+        <div>
+          <img src="img/artist-2.png" alt="Artist Oluchi Mazi">
+          <h3 class="font-argue text-blueAAN text-2xl pl-5 pt-5">Artist</h3>
+          <h4 class="pl-5">Oluchi Mazi</h4>
+        </div>
+        <div>
+          <img src="img/development.png" alt="Artist Nuria Pelayo">
+          <h3 class="font-argue text-blueAAN text-2xl pl-5 pt-5">Development</h3>
+          <h4 class="pl-5">Nuria Pelayo</h4>
+        </div>
+        <div>
+          <img src="img/sales.png" alt="Artist Tua Manera">
+          <h3 class="font-argue text-blueAAN text-2xl pl-5 pt-5">Sales</h3>
+          <h4 class="pl-5">Tua Manera</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="pt-32 pb-24 bg-[url('img/frame-dark-bg.png')] bg-cover bg-no-repeat bg-center">
+    <div class="max-w-[1270px] px-[50px] mx-auto">
+      <h2 class="text-white font-argue text-[56px] text-center mb-12">Roadmap</h2>
+
+      <div class="bg-white relative rounded mb-5">
+        <div class="h-[36px] min-w-[24px] ml-[28px] bg-[url('img/badget.png')] bg-left bg-no-repeat absolute top-[-5px] "></div>
+        <div class="flex py-[31px]  px-[75px] items-center">
+          <h3 class="font-argue text-2xl mr-[100px] whitespace-nowrap w-1/4">Referral Program</h3>
+          <p>10% of your friend's NFT reward value will be credited to you on a monthly<br> basis for as long as the client stays with us.</p>
+        </div>
+      </div>
+
+      <div class="bg-white relative rounded mb-5">
+        <div class="h-[36px] min-w-[24px] ml-[28px] bg-[url('img/badget.png')] bg-left bg-no-repeat absolute top-[-5px] "></div>
+        <div class="flex py-[31px]  px-[75px] items-center">
+          <h3 class="font-argue text-2xl mr-[100px] whitespace-nowrap w-1/4">Loyalty Program</h3>
+          <p>Increase APY for long term members (over 12 months).</p>
+        </div>
+      </div>
+
+      <div class="bg-white relative rounded mb-5">
+        <div class="h-[36px] min-w-[24px] ml-[28px] bg-[url('img/badget.png')] bg-left bg-no-repeat absolute top-[-5px] "></div>
+        <div class="flex py-[31px]  px-[75px] items-center">
+          <h3 class="font-argue text-2xl mr-[100px] whitespace-nowrap w-1/4">Digital to real</h3>
+          <p>After 1 year of continuous ownership members can receive a physical version of your NFT.</p>
+        </div>
+      </div>
+
+      <div class="bg-white relative rounded mb-5">
+        <div class="h-[36px] min-w-[24px] ml-[28px] bg-[url('img/badget.png')] bg-left bg-no-repeat absolute top-[-5px] "></div>
+        <div class="flex py-[31px]  px-[75px] items-center">
+          <h3 class="font-argue text-2xl mr-[100px] whitespace-nowrap w-1/4">Argentum Community</h3>
+          <p>Argentum community  Weekly content, live events, etc.</p>
+        </div>
+      </div>
+
+      
+      <div class="flex items-center justify-end mr-20  mt-20">
+        <a href="" class="border border-white text-center inline-block py-3 px-8 rounded-full text-white mr-5">Join Us to Chat</a>
+        <a href="" class="inline-block"><img src="img/discrod-button.png" alt="Button with discord icon"></a>
+      </div>
+    </div>
+  </section>
+  <section class="pt-[150px] pb-[100px] relative">
+    <div class="max-w-[1270px] px-[50px] mx-auto flex flex-col">
+      <div class="flex">
+        <div class="w-1/2">
+          <h2 class="font-argue text-[56px]">Frequently<br> Asked Questions</h2>
+          <div class="h-[66px] bg-[url('img/line-2.png')] bg-no-repeat bg-right my-10"></div>
+        </div>
+        <div class="w-1/2"></div>
+      </div>
+      <div class="flex">
+        <div class="w-1/2">
+          <div>
+            <h3 class="font-argue mb-4 text-2xl">What is Argentum NFT?</h3>
+            <p class="mb-14">Argentum Alpha NFT is a collection of algorithmic generated contemporary art designed by Argentum group and minted as NFT’s on the network. They are constructed from various geometric shapes, lines and colors in different % which determines their rarity. The purpose of Argentum Alpha NFT is to provide economic benefits to their owner’s. Aiming to be the world safest NFT collection. We achieve this by providing to our community buy back options at the same price as the minting purchase price measured in USD.</p>
+          </div>
+          <div>
+            <h3 class="font-argue mb-4 text-2xl">What do I get ?</h3>
+            <p class="mb-14">After the mint you will receive your Argentum alpha NFT to your wallet.  
+              The rewards will be paid out to your wallet on a monthly basis, at the first business day of each month.</p>
+          </div>
+          <div>
+            <h3 class="font-argue mb-4 text-2xl">How do I get one?</h3>
+            <p class="mb-14">Go to our website argentumnft.com connect your wallet, choose your desired tier and category and click mint, approve the transaction in your wallet, and… congratulations! You are now a proud owner of the Argentum Alfa NFT.
+            </p>
+          </div>
+          <div>
+            <h3 class="font-argue mb-4 text-2xl">What if I don’t have a wallet and I’m new to crypto? </h3>
+            <p class="mb-14">Don’t worry,  we have got you covered with our how to series and our hands on support team that will make sure you are safe and understand the process.
+            </p>
+          </div>
+
+        </div>
+        <div class="w-1/2 flex justify-end pb-[250px] ml-[134px]">
+          <img src="img/art-lines.png" alt="Lines NFT Art">
+        </div>
+      </div>
+      <div class="absolute w-[202px] h-[641px] bg-[url('img/arc-collage.png')] bg-center bg-no-repeat right-0 bottom-0"></div>
+    </div>
+  </section>
+  <section class="mt-[-100px] pb-[100px]">
+    <div class="flex max-w-[1270px] px-[50px] mx-auto">
+        <div class="mr-[90px]">
+          <h3 class="text-blueAAN font-argue text-[56px] leading-[64px]">99% of all NFT Projects<br> will go to Zero<br> <span class="text-[32px]">Guaranteed Reward NFT can always be</span></h3>
+        </div>
+        <div class="flex items-end ml-">
+          <div>
+            <a href="#" class="inline-block bg-blueAAN text-white py-3 px-8 rounded-full drop-shadow-xl">Discover Artwork</a>
+          </div>
+        </div>
+    </div>
+  </section>
+  <section class="pt-[200px] pb-[180px] bg-[url('img/frame-dark-bg.png')] bg-center bg-no-repeat bg-cover">
+    <div class="flex max-w-[1270px] px-[50px] mx-auto justify-evenly items-center">
+      <img src="img/nft-bottom.png" alt="NFT ART">
+      <div>
+        <h2 class="font-argue text-white text-[56px] mb-14">Contact Us</h2>
+
+        <a href="tel:+610404507170" class="h-[52px] pl-[70px] mb-5 bg-[url('img/phone-icon.png')] bg-left bg-no-repeat text-white items-center flex"><span class="my-auto block">(+61) 0404 507 170</span></a>
+        <a href="mailto:welcome@argentumnft.com" class="h-[52px] pl-[70px] bg-[url('img/mail-icon.png')] bg-left bg-no-repeat text-white items-center flex"><span class="my-auto block">welcome@argentumnft.com</span></a>
+        <div class="flex items-center justify-end mr-20  mt-20">
+          <a href="" class="border border-white text-center inline-block py-3 px-8 rounded-full text-white mr-5">Join Us to Chat</a>
+          <a href="" class="inline-block"><img src="img/discrod-button.png" alt="Button with discord icon"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="pt-[60px] pb-[40px] bg-[#151A2C] bg-opacity-80">
+    <div class="max-w-[1270px] px-[50px] mx-auto">
+      <div class="flex justify-between border-gray-500/75 border-b items-center pb-5">
+        <img src="img/argentum-logo.svg" alt="Argentum Alfa NFT logo">
+        <div class="flex">
+          <a href="#" class="mr-2"><img src="img/facebook.png" alt="Facebook logo"></a>
+          <a href="#" class="mr-2"><img src="img/twitter.png" alt="twitter logo"></a>
+          <a href="#" class="mr-2"><img src="img/insta.png" alt="Instagram logo"></a>
+        </div>
+      </div>
+      <div class="pt-5 text-white flex justify-between">
+        <p class="opacity-50">All Rights Reserved.</p>
+        <div>
+          <a href="#" class="mr-10">Terms of Use</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
